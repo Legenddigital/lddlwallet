@@ -1,0 +1,16 @@
+language: go
+go:
+  - 1.x
+
+sudo: required
+services:
+  - docker
+
+env:
+  - GOVERSION=1.9
+  - GOVERSION=1.10
+
+install: true
+
+script:
+  - ./run_tests.sh $GOVERSION
